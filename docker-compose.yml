@@ -19,8 +19,6 @@ services:
       - SMTP_SERVER=server
       - SMTP_PORT=465
       - TZ=Etc/UTC
-      - LETSENCRYPT_HOST=kb.jbad.io
-      - LETSENCRYPT_EMAIL=joe307bad@gmail.com
       - VIRTUAL_HOST=kb.jbad.io
     depends_on:
       - postgres
