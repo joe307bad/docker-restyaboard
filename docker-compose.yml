@@ -1,13 +1,15 @@
-version: '2'
+version: '2.5'
+networks:
+  webproxy:
+    external: true
+    
 services:
   restyaboard:
     build: .
     expose:
       - 80
     networks:
-      custom_network:
-        external:
-          name: webproxy
+      - webproxy
     volumes:
        - /mnt/media/Library/Docker/kanban-board/data/:/usr/share/nginx/html/media
     environment:
