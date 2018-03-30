@@ -1,8 +1,4 @@
 version: '2.5'
-networks:
-  webproxy:
-    external: true
-    
 services:
   restyaboard:
     build: .
@@ -39,3 +35,7 @@ services:
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=restyaboard
     restart: always
+
+networks:
+  webproxy:
+    external: true
